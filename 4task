@@ -1,0 +1,59 @@
+Задание:
+
+1. Создайте новый локальный репозиторий с именем "GitBasicsAssignment".
+2. Инициализируйте репозиторий и создайте файл "example.txt" в корне проекта.
+3. Добавьте следующий текст в "example.txt": "Git is powerful!".
+4. Зафиксируйте изменения.
+5. Создайте новую ветку с именем "feature".
+6. Внесите изменения в "example.txt", добавив строку: "Learning Git is fun!".
+7. Зафиксируйте изменения в ветке "feature".
+8. Вернитесь на ветку "main".
+9. Внесите еще одно изменение в "example.txt", добавив строку: "Git is versatile!".
+10. Зафиксируйте изменения в ветке "main".
+11. Объедините изменения из ветки "feature" в ветку "main".
+12. Создайте удаленный репозиторий на GitHub с именем "GitBasicsAssignmentRemote".
+13. Свяжите локальный репозиторий с удаленным.
+14. Отправьте все изменения на удаленный репозиторий.
+
+Решение:
+
+# Шаг 1
+git init GitBasicsAssignment
+cd GitBasicsAssignment
+
+# Шаг 2
+touch example.txt
+echo "Git is powerful!" > example.txt
+
+# Шаг 3 и 4
+git add example.txt
+git commit -m "Initial commit"
+
+# Шаг 5
+git checkout -b feature
+
+# Шаг 6
+echo "Learning Git is fun!" >> example.txt
+git add example.txt
+git commit -m "Added fun learning message"
+
+# Шаг 7
+git checkout main
+
+# Шаг 8 и 9
+echo "Git is versatile!" >> example.txt
+git add example.txt
+git commit -m "Added versatility message"
+
+# Шаг 10 и 11
+git merge feature
+
+# Шаг 12
+# (Создание удаленного репозитория на GitHub)
+
+# Шаг 13
+git remote add origin <URL удаленного репозитория>
+
+# Шаг 14
+git push -u origin main
+git push origin feature
